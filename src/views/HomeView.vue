@@ -6,7 +6,7 @@ const mouse = reactive(useMouse())
 const title = useTitle('Right')
 
 useEventListener('mousemove', (e) => {
-  console.log(e.clientX, e.clientY)
+  // console.log(e.clientX, e.clientY)
 })
 
 console.log(mouse.x, mouse.y)
