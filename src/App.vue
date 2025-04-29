@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import { ref } from 'vue'
-import { of } from 'rxjs'
+import { of, from } from 'rxjs'
 import { onClickOutside } from '@vueuse/core'
 import { OnClickOutside } from '@vueuse/components'
 
@@ -13,6 +13,10 @@ const handleClickOutside = () => {
 }
 
 of(1, 2, 3, 4, 5).subscribe((value) => {
+  // console.log(value)
+})
+
+from([1, 2, 3, 4, 5]).subscribe((value) => {
   // console.log(value)
 })
 
