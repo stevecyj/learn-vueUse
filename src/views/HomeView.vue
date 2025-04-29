@@ -10,7 +10,8 @@ useEventListener('mousemove', (e) => {
   // console.log(e.clientX, e.clientY)
 })
 
-console.log(mouse.x, mouse.y)
+// console.log(mouse.x, mouse.y)
+
 onUnmounted(() => {
   console.log('unmounted')
 })
