@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import { ref } from 'vue'
-import { of, from } from 'rxjs'
+import { of, from, interval } from 'rxjs'
 import { onClickOutside } from '@vueuse/core'
 import { OnClickOutside } from '@vueuse/components'
 
@@ -17,6 +17,10 @@ of(1, 2, 3, 4, 5).subscribe((value) => {
 })
 
 from([1, 2, 3, 4, 5]).subscribe((value) => {
+  // console.log(value)
+})
+
+interval(1000).subscribe((value) => {
   // console.log(value)
 })
 
