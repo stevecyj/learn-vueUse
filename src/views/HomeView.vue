@@ -1,16 +1,11 @@
 <script setup>
-import { useMouse, useTitle, useEventListener } from '@vueuse/core'
 import { UseMouse } from '@vueuse/components'
-import { reactive, onUnmounted } from 'vue'
+import { onUnmounted } from 'vue'
+import { useHomeEvents } from '@/components/Home/composables/useHomeEvents'
+import { useHomeState } from '@/components/Home/composables/useHomeState'
 
-const mouse = reactive(useMouse())
-const title = useTitle('Right')
-
-useEventListener('mousemove', (e) => {
-  // console.log(e.clientX, e.clientY)
-})
-
-// console.log(mouse.x, mouse.y)
+const { mouse } = useHomeEvents()
+const { title } = useHomeState()
 
 onUnmounted(() => {
   console.log('unmounted')
